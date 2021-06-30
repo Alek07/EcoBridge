@@ -136,3 +136,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# We are using Poetry so the requirements file is not really needed for now.
+# only needed when deploying to Cloud Foundry
+requirements.txt

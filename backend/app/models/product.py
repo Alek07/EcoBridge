@@ -14,12 +14,12 @@ class Product(Base):
     name = Column(String(256), nullable=False, index=True)
     description = Column(String(2048), server_default="")
     price = Column(Numeric(9, 2), server_default="0.00")
-    owner_id = Column(
-        Integer,
-        ForeignKey(get_tablename("users") + ".id"),
-        nullable=False,
-        index=True,
-    )
+    # owner_id = Column(
+    #     Integer,
+    #     ForeignKey(get_tablename("users") + ".id"),
+    #     nullable=False,
+    #     index=True,
+    # )
     image = Column(String(512))
     geolatitude = Column(Numeric(8, 6))
     geolongitude = Column(Numeric(8, 6))

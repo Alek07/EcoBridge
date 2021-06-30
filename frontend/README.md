@@ -1,4 +1,4 @@
-# EcoBridge Frontend - Call For Code 2021 :evergreen_tree: :recycle: :bridge_at_night:
+# NextJS Typescript Boilerplate
 
 Bootstrap a developer-friendly NextJS app configured with:
 
@@ -8,7 +8,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
-## Deploy 
+## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
@@ -25,16 +25,3 @@ yarn create next-app --example with-typescript-eslint-jest with-typescript-eslin
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-To first run project
-
-```
-yarn
-```
-
-
-To run frontend in development 
-
-```
-yarn dev
-```

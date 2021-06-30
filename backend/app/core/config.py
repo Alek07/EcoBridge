@@ -1,3 +1,6 @@
+import os
+import json
+
 from starlette.config import Config
 from starlette.datastructures import Secret, CommaSeparatedStrings
 
@@ -19,4 +22,18 @@ JWT_ALGORITHM = config("JWT_ALGORITHM", cast=str, default="HS256")
 JWT_AUDIENCE = config("JWT_AUDIENCE", cast=str, default="ecobridge:auth")
 JWT_TOKEN_PREFIX = config("JWT_TOKEN_PREFIX", cast=str, default="Bearer")
 
-DATABASE_URL = config("DATABASE_URL", cast=str)
+if 'VCAP_SERVICES' in os.environ:
+    vcap = json.loads(os.getenv('VCAP_SERVICES'))
+    if "dashDB For Transactions" in vcap:
+        dash_db = vcap["dashDB For Transactions"]
+        database_service = dash_db[0]
+        creds = database_service["credentials"]
+        username = creds["username"]
+        password = creds["password"]
+        host = creds["hostname"]
+        port = creds["port"]
+        db = creds["db"]
+        db_url = f"db2+ibm_db://{username}:{password}@{host}:{port}/{db}"
+        DATABASE_URL = db_url
+else:
+    DATABASE_URL = config("DATABASE_URL", cast=str)

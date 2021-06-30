@@ -1,0 +1,9 @@
+---
+applications:
+  - name: ecobridge-backend
+    path: ./backend/
+    command: python -m app.main
+    memory: 512M
+  - name: ecobridge-frontend
+    path: ./frontend/
+    command: yarn start

@@ -16,7 +16,7 @@ class User(Base):
     salt = Column(String(128), nullable=False)
     password = Column(String(128), nullable=False)
     is_active = Column(Boolean, nullable=False, server_default="1")
-    products = relationship(get_tablename("products"), cascade="all, delete-orphan")
+    #products = relationship(get_tablename("products"), cascade="all, delete-orphan")
     created_at, updated_at = timestamps()
 
     triggers_ddl = {generate_updated_at_trigger_ddl(__tablename__)}

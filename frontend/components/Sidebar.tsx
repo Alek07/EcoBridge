@@ -1,38 +1,42 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Image from "next/image";
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 function Sidebar() {
   // routing de next
-  const router = useRouter();
+  const router = useRouter()
 
   return (
-    <aside className="bg-gray-300 sm:w-1/3 xl:w-1/5 sm:min-h-screen p-5">
-      <div className="text-center mb-5">
-        <Image src="/logoAIG.png" alt="Logo AIG" width="auto" height="95%" />
-        <p className="text-gray-800 text-xl text-center font-bold">
-          EcoBridge
-        </p>
-      </div>
+    <aside className="xl:w-48 sm:w-min sm:min-h-screen z-10 p-5 bg-white md:fixed">
+      <Link href="/">
+        <div className="inline-flex items-center cursor-pointer">
+          <img
+            src="/images/ecobridge_logo.png"
+            alt="ecobridge_logo"
+            className="w-10"
+          />
+          <p className="ml-1 text-green-600 md:text-sm lg:text-md font-extrabold">
+            EcoBridge
+          </p>
+        </div>
+      </Link>
 
       <nav className="mt-5 list-none">
         <li
           className={
-            router.pathname === "/aboutus"
-              ? "bg-gray-800 p-3 rounded text-white"
-              : "p-2"
+            router.pathname === '/about-us'
+              ? 'bg-green-800 font-bold text-l p-2 rounded-md text-white md:mb-2'
+              : 'text-green-600 text-l font-bold p-2 md:mb-2'
           }
         >
-          <Link href="/">
+          <Link href="/about-us">
             <a className="block">ABOUT US</a>
           </Link>
         </li>
         <li
           className={
-            router.pathname === "/resources"
-              ? "bg-gray-800 p-3 rounded text-white"
-              : "p-2"
+            router.pathname === '/resources'
+              ? 'bg-green-800 font-bold text-l p-2 rounded-md text-white md:mb-2'
+              : 'text-green-600 text-l font-bold p-2 md:mb-2'
           }
         >
           <Link href="/resources">
@@ -41,9 +45,9 @@ function Sidebar() {
         </li>
         <li
           className={
-            router.pathname === "/learn"
-              ? "bg-gray-800 p-3 rounded text-white"
-              : "p-2"
+            router.pathname === '/learn'
+              ? 'bg-green-800 font-bold text-l p-2 rounded-md text-white md:mb-2'
+              : 'text-green-600 text-l font-bold p-2 md:mb-2'
           }
         >
           <Link href="/learn">
@@ -52,9 +56,9 @@ function Sidebar() {
         </li>
         <li
           className={
-            router.pathname === "/events"
-              ? "bg-gray-800 p-3 rounded text-white"
-              : "p-2"
+            router.pathname === '/events'
+              ? 'bg-green-800 font-bold text-l p-2 rounded-md text-white md:mb-2'
+              : 'text-green-600 text-l font-bold p-2 md:mb-2'
           }
         >
           <Link href="/events">
@@ -63,7 +67,7 @@ function Sidebar() {
         </li>
       </nav>
     </aside>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

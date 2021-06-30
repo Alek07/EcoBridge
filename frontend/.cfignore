@@ -1,0 +1,5 @@
+Dockerfile
+test
+*.md
+components
+node_modules

@@ -40,3 +40,12 @@ def get_application(db: Optional[Engine] = None) -> FastAPI:
 
 
 app = get_application()
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+
+    PORT = int(os.getenv("PORT", 8080))
+    uvicorn.run("app.main:app", log_level="info", port=PORT, host="0.0.0.0")
+
+
