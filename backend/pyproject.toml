@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "ecobridge-backend"
+version = "0.1.0"
+description = ""
+authors = ["mk-t <65366306+mk-t@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.65.2"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+email-validator = "^1.1.3"
+python-multipart = "^0.0.5"
+httpx = "^0.18.1"
+asgi-lifespan = "^1.0.1"
+PyJWT = "^2.1.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+setuptools = "^57.0.0"
+wheel = "^0.36.2"
+SQLAlchemy = "~=1.3.1"
+ibm-db = "^3.0.4"
+ibm-db-sa = "^0.3.6"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.902"
+black = "^21.6b0"
+sqlalchemy-stubs = "^0.4"
+pytest = "^6.2.4"
+pytest-asyncio = "^0.15.1"
+pytest-cov = "^2.12.1"
+rope = "^0.19.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 99
