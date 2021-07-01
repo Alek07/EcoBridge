@@ -4,7 +4,7 @@ Foobar is a Python library for dealing with word pluralization.
 
 ## Arquitectura
 
-Imagen de la arquitectura.
+![arquitectura](https://user-images.githubusercontent.com/35198616/124071806-8b330380-da05-11eb-81b1-68d2a0070df7.jpeg)
 
 ## Instalación 
 
